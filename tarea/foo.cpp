@@ -9,13 +9,6 @@ Matriz2D::Matriz2D() : filas(3) , columnas(3) {
         ptr[i] = new float[columnas];
     }
 
-    for(int i = 0; i < filas; i++){
-        for(int j = 0; j < columnas; j++){
-            ptr[i][j] = rand() % 10;
-        }
-    }
-
-
 }
 
 Matriz2D::Matriz2D(int n) : filas(n) ,columnas(n){
