@@ -47,6 +47,15 @@ Matriz2D::Matriz2D(Matriz2D&& m){
     m.columnas = 0 ;
 }
 
+Matriz2D::~Matriz2D() {
+
+    for (int i = 0; i < filas; i++){
+        delete[] ptr[i];
+    }
+    delete[] ptr ;
+
+}
+
 
 Matriz2D t(Matriz2D& m){
     int filas = m.columnas ;
@@ -164,14 +173,7 @@ Matriz2D operator/(const Matriz2D& m, float n){
     return ob ;
 }
 
-Matriz2D::~Matriz2D() {
 
-    for (int i = 0; i < filas; i++){
-        delete[] ptr[i];
-    }
-    delete[] ptr ;
-
-}
 
 
 float Matriz2D::get(int i, int j){
