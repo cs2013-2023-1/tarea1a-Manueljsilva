@@ -164,6 +164,16 @@ Matriz2D operator/(const Matriz2D& m, float n){
     return ob ;
 }
 
+Matriz2D::~Matriz2D() {
+
+    for (int i = 0; i < filas; i++){
+        delete[] ptr[i];
+    }
+    delete[] ptr ;
+
+}
+
+
 float Matriz2D::get(int i, int j){
     return ptr[i][j];
 }
