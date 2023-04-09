@@ -47,6 +47,7 @@ Matriz2D::Matriz2D(Matriz2D&& m){
     m.columnas = 0 ;
 }
 
+/*
 Matriz2D::~Matriz2D() {
 
     for (int i = 0; i < filas; i++){
@@ -55,7 +56,7 @@ Matriz2D::~Matriz2D() {
     delete[] ptr ;
 
 }
-
+*/
 
 Matriz2D t(Matriz2D& m){
     int filas = m.columnas ;
